@@ -1,0 +1,44 @@
+nav {
+  background: #340b49;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Footer */
+.footer {
+  background: #713aae;
+  color: white;
+  text-align: center;
+  padding: 20px 00;
+
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.btnAgregar{
+    background-color: #9d4de7 !important;
+    color: white !important;
+}
