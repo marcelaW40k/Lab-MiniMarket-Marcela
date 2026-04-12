@@ -16,13 +16,7 @@
       rel="stylesheet"
     />
     <!--Font-awesone-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -44,44 +38,116 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Carrito</a>
+              <button type="button" class="btn btnNotificacion">
+                Carrito <span id="badge" class="badge text-bg-light">0</span>
+              </button>
             </li>
-           
           </ul>
         </div>
       </div>
     </nav>
-      <main class="content d-flex justify-content-center align-items-center vh-90">
-        <div class="card shadow content-card" style="width: 18rem;">
-            <div >
-                <img src="https://i.pinimg.com/1200x/02/49/5f/02495fb1b8bd32a24fb8eb483a18a074.jpg" class="card-img-top mx-auto d-block content-image" alt="Foto-perfil">
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Banana</h3>
-                <h6 class="card-text"><strong>$0.00</strong></h6>
-              
-            </div>
-            <div class="card-body ">
-                <button class="btn btnAgregar"  class="card-link">Agregar al carrito</button>
-            </div>
-            </div>
-    </main>
-
-     <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer-section">
-          <h3>Equipo #3</h3>
-        <p>Marcela</p>
-          
+    <main
+      class="content d-flex justify-content-center align-items-center vh-90 flex-fill"
+    >
+      <div class="card shadow content-card" style="width: 18rem">
+        <div>
+          <img
+            src="https://i.pinimg.com/1200x/02/49/5f/02495fb1b8bd32a24fb8eb483a18a074.jpg"
+            class="card-img-top mx-auto d-block content-image"
+            alt="Banano"
+          />
         </div>
-
-        <div class="footer-section">
-          <h3>Contacto</h3>
-          <p>📧 contacto@micarrito.com</p>
-          <p>📞 +57 300 000 0000</p>
+        <div class="card-body">
+          <h3 class="card-title">Banana</h3>
+          <h6 class="card-text"><strong>$5000.00</strong></h6>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btnAgregar"
+            data-nombre="Banano"
+            data-precio="5000"
+            class="card-link"
+          >
+            Agregar al carrito
+          </button>
         </div>
       </div>
-
+      <div class="card shadow content-card" style="width: 18rem">
+        <div>
+          <img
+            src="https://i.pinimg.com/1200x/1b/81/09/1b81090cf7697760c19ad56bd422a24c.jpg"
+            class="card-img-top mx-auto d-block content-image"
+            alt="Arandano"
+          />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Arandanos</h3>
+          <h6 class="card-text"><strong>$10000.00</strong></h6>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btnAgregar card-link"
+            data-nombre="Arandanos"
+            data-precio="10000"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+      <div class="card shadow content-card" style="width: 18rem">
+        <div>
+          <img
+            src="https://i.pinimg.com/736x/5f/6f/9c/5f6f9cd727a1fe7cca363827901aaf29.jpg"
+            class="card-img-top mx-auto d-block content-image"
+            alt="Foto-perfil"
+          />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Piña</h3>
+          <h6 class="card-text"><strong>$3000.00</strong></h6>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btnAgregar card-link"
+            data-nombre="Piña"
+            data-precio="3000"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+      <div class="card shadow content-card" style="width: 18rem">
+        <div>
+          <img
+            src="https://i.pinimg.com/1200x/eb/0d/ba/eb0dbaf8f6c291644750f8359cf54a3a.jpg"
+            class="card-img-top mx-auto d-block content-image"
+            alt="Foto-perfil"
+          />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Sandia</h3>
+          <h6 class="card-text"><strong>$3500.00</strong></h6>
+        </div>
+        <div class="card-body">
+          <button
+            class="btn btnAgregar card-link"
+            data-nombre="Sandia"
+            data-precio="3500"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+    </main>
+    <section class="container" id="carrito">
+      <h4>Carrito</h4>
+      <ul id="lista-carrito">
+        <li id="carritoVacio">Carrito vacio</li>
+      </ul>
+      <span >Total: <strong id="total">0</strong></span>
+      <button class="mt-2 mb-3" id="btn-vaciar">Vaciar carrito</button>
+    </section>
+    <footer class="footer">
       <div class="footer-bottom">
         <p>© 2026 Mi Carrito - Todos los derechos reservados</p>
       </div>
@@ -91,5 +157,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
   </body>
 </html>
